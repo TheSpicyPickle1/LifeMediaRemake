@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    font-size: 20px;
+    --color:rgb(255, 255, 255);
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    background-image: url(background.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+header img {
+    width: 20rem;
+}
+header > div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+header > div > * {
+    background-position-x: 100%;
+    filter: drop-shadow(0px 0px 6px white);
+}
+a{
+    color: black;
+}
+header > div > a {
+    background: linear-gradient(90deg, #138adb 0%, #9ae945 100%);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px black;
+    text-decoration: none;
+    background-size: 400% 400%;
+    transition: 700ms;
+    text-shadow: 0px 0px 6px white;
+}
+header > div > a:hover {
+    background-position-x: 100%;
+    color: white;
+}
+nav{
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1rem 1rem -0.75rem black;
+    border-radius: 0 0 1rem 1rem;
+    max-width: 20rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem O;
+    margin: 0 auto;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    padding: 0 1rem;
+}
+main {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+.grid {
+    display: grid;
+    grid-template-areas:"a a b"
+                        "c d d";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;                    
+}
+.grid > div {
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid.first > .a {
+    grid-area: a;
+    background-color: #9ae945;  
+}
+.grid.first > .b {
+    grid-area: b;
+    background-color: #138adb;
+    color: white;
+}
+.grid.first > .c {
+    grid-area: c;
+    background-color: #9ae945;
+}
+.grid.first > .d {
+    grid-area: d;
+    background-color: #138adb;
+    color: white;
+}
+.grid.second {
+    grid-template-areas:"a b b"
+                        "c c d";
+}
+.grid.second > .a {
+    grid-area: a;
+    background-color: #138adb;
+    color: white; 
+    padding: 1rem;
+}
+.grid.second > .b {
+    grid-area: b;
+    background-color: #9ae945;
+    padding: 1rem;
+}
+.grid.second > .c {
+    grid-area: c;
+    background-color: #138adb;
+    color: white;
+    padding: 1rem;
+}
+.grid.second > .d {
+    grid-area: d;
+    background-color: #9ae945;
+    padding: 1rem; 
+}
+@media screen and (max-width: 426px) {
+    .grid.first,.grid.second{
+        grid-template-areas:"a" "b" "c" "d";
+        grid-template-columns: 1fr;
+    }   
+}
+.grid.kontakt-main {
+    grid-template-columns: 3fr 1fr;
+}
+.grid.kontakt-main > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+}
+.grid.kontakt-main iframe {
+    max-width: 100%;
+}
+@media screen and (max-width: 855px) {
+    .grid.kontakt-main{
+        grid-template-columns: 2fr 1fr;
+    }
+}
+@media screen and (max-width: 660px) {
+    .grid.kontakt-main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 593px) {
+    .grid.kontakt-main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "div";
+    }
+}
+.grid.companies > div {
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 0.5rem -0.25rem black;
+    padding: 1rem;
+    margin: 1rem;
+} 
+@media screen and (max-width: 852px) {
+    .grid.companies{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "div div";
+    }
+}
+@media screen and (max-width: 574px) {
+    .grid.companies{
+        grid-template-columns: 1fr;
+        grid-template-areas: "div";
+    }
+}
